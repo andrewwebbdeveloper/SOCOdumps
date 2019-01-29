@@ -60,6 +60,13 @@ a:active {
 
 }
 
+.header__subtitle {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #d8d8d8;
+  transform: translate(0, -3rem)
+}
+
 
 .location__card--open {
   display: grid;
@@ -223,7 +230,6 @@ a:active {
 }
 
 .footer {
-  border: solid #cff7bc .1rem;
   padding-top: 3rem;
   margin-top: 3rem;
   grid-column: 1/4; 
