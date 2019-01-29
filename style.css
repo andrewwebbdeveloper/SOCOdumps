@@ -44,10 +44,12 @@ a:active {
   transform: translate(-5%) 
 }
 .header__title {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Fugaz One', cursive;
+
   justify-self: center; 
   color: #07d8d8; 
-  font-size: 4.5rem; 
+  font-weight: 300; 
+  font-size: 6rem; 
   text-shadow: 2px 2px .1rem #616867;
   transform: translate(-3%);   
 }
