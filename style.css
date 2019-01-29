@@ -45,7 +45,7 @@ a:active {
   text-align: center;
   width: 37.5rem;
   transition: all .3s ease-in; 
-  border-bottom: dotted #e4fc0e .5rem;
+  border-bottom: dotted #07d8d8 .5rem;
 
 }
 .header__title {
@@ -209,5 +209,25 @@ a:active {
   font-weight: 600; 
   transform: translate(.5rem)
 
+}
 
+.footer {
+  border: solid #cff7bc .3rem;
+  padding-top: 3rem;
+  grid-column: 1/4; 
+  height: 15rem; 
+  width: 100%; 
+  background-color: #616867;
+  display: inherit;
+  justify-content: center;
+  text-shadow: 0 0 10rem #e7f0ef;
+}
+.footer__links {
+  
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #e7f0ef;
+  font-size: 2rem;
+  font-weight: 700;
 }
