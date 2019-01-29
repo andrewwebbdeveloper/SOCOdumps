@@ -27,14 +27,13 @@ a:active {
 
 .container__main {
   display: grid;
-  justify-content: center;
-  grid-template-columns: minmax(.5rem, 1fr) 100vw minmax(.5rem, 1fr); 
+  /* grid-template-columns: minmax(.5rem, 1fr) min-content minmax(.5rem, 1fr); */
+  grid-template-columns: 1fr 375px 1fr; 
 }
 
 .container {
-  grid-column: 2/3;
+  grid-column: 2;
   display: grid;
-  justify-content: center;
   transition: all ease-in-out .3s;
 
    
@@ -47,33 +46,32 @@ a:active {
 }
 .header__title {
   font-family: 'Fugaz One', cursive;
+  margin-bottom: 2rem;
 
   justify-self: center; 
   color: #07d8d8; 
   font-weight: 300; 
   font-size: 5.5rem; 
   text-shadow: .5rem .3rem 1rem #616867;
-  transform: translate(-3%);   
+  transform: translate(-6%, 30%);   
 }
 
 
 .location__card--open {
   display: grid;
   height: 10rem; 
-  width: 100%;
+  width: 85%;
   /* background-color: #ffffff; */ 
   padding: .1rem; 
-  margin: 0rem 1rem 1.5rem 1rem; 
   
 }
 .location__card--closed {
   filter: brightness(.4);
   display: grid;
   height: 10rem; 
-  width: 100%;
+  width: 85%;
   /* background-color: #ffffff; */ 
   padding: .1rem; 
-  margin: 0rem 1rem 1.5rem 1rem; 
   
 }
 
