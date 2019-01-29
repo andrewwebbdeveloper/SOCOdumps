@@ -40,9 +40,13 @@ a:active {
 }
 
 .header__container{
+  padding-top: 3rem;
+  align-content: center;
   text-align: center;
-  transform: translate(-5%);
+  width: 37.5rem;
   transition: all .3s ease-in; 
+  border-bottom: dotted #e4fc0e .5rem;
+
 }
 .header__title {
   font-family: 'Fugaz One', cursive;
@@ -53,7 +57,6 @@ a:active {
   font-weight: 300; 
   font-size: 5.3rem; 
   text-shadow: 0rem 0rem 2.5rem #000000;
-  transform: translate(-6%, 30%);   
 }
 
 
@@ -64,6 +67,7 @@ a:active {
   /* background-color: #ffffff; */ 
   padding: .1rem; 
   margin-bottom: 3rem;
+  
   
 }
 .location__card--closed {
@@ -104,6 +108,7 @@ a:active {
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   background-color:#07d8d8;
+  border-bottom: solid #cff7bc .3rem;
 }
 
 .location__closed {
@@ -119,6 +124,8 @@ a:active {
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   background-color:rgb(224, 99, 85);
+  border-bottom: solid #cff7bc .3rem;
+
 
 }
 
@@ -157,6 +164,8 @@ a:active {
   
   transform: translate(-17%, 0%);
   background-color: #616867;
+  border-bottom: solid #cff7bc .3rem;
+
 }
 .location__miles--text {
   text-transform: uppercase;
@@ -182,6 +191,8 @@ a:active {
 
   background-color:#07d8d8;
   transition: all ease-in-out .2s;
+  border-bottom: solid #cff7bc .3rem;
+
 }
 
 .location__gps:hover {
