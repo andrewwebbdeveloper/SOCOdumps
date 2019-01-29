@@ -241,7 +241,6 @@ let locationsArray = [
 let sortedLocationsArray = [];
 
 
-
 getDistance = () => {
 
   const la = locationsArray;
@@ -291,7 +290,7 @@ getDistance = () => {
 
   // Prepends (to account for location watching) SORTED locations to an array 
   sla.unshift(la);
-  console.log(sla);
+  //console.log(sla);
 
   // Calls isOpen() in Loop from sorted locations
   isOpenLoop();
@@ -306,7 +305,7 @@ geoFindMe = (callback) => {
 
 
   if (!navigator.geolocation) {
-    console.log('geo no worky')
+    console.log('geolocation no worky')
   }
 
   success = (position) => {
