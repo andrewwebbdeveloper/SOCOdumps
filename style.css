@@ -63,6 +63,7 @@ a:active {
   width: 85%;
   /* background-color: #ffffff; */ 
   padding: .1rem; 
+  margin-bottom: 3rem;
   
 }
 .location__card--closed {
@@ -71,7 +72,8 @@ a:active {
   height: 10rem; 
   width: 85%;
   /* background-color: #ffffff; */ 
-  padding: .1rem; 
+  padding: .1rem;
+  margin-bottom: 3rem; 
   
 }
 
