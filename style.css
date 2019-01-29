@@ -28,12 +28,13 @@ a:active {
 .container__main {
   display: grid;
   justify-content: center;
-  grid-template-columns: minmax(.5rem, 1fr) 365px minmax(.5rem, 1fr); 
+  grid-template-columns: minmax(.5rem, 1fr) 100vw minmax(.5rem, 1fr); 
 }
 
 .container {
   grid-column: 2/3;
   display: grid;
+  justify-content: center;
   transition: all ease-in-out .3s;
 
    
