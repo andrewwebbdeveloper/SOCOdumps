@@ -56,6 +56,7 @@ a:active {
   font-weight: 300; 
   font-size: 5.3rem; 
   text-shadow: 0rem 0rem 2.5rem #000000;
+  -webkit-text-shadow: 0rem 0rem 2.5rem #000000;
   transition: all ease-in-out .3s;
 
 }
@@ -239,6 +240,7 @@ a:active {
   display: inherit;
   justify-content: center;
   text-shadow: 0 0 10rem #e7f0ef;
+  -webkit-text-shadow: 0 0 10rem #e7f0ef;
   transition: all ease-in-out .5s;
 
 }
