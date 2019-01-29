@@ -45,7 +45,6 @@ a:active {
   text-align: center;
   width: 37.5rem;
   transition: all .3s ease-in; 
-  border-bottom: dotted #07d8d8 .5rem;
 
 }
 .header__title {
