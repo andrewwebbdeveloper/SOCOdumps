@@ -28,7 +28,7 @@ a:active {
 .container__main {
   display: grid;
   justify-content: center;
-  grid-template-columns: minmax(.5rem, 1fr) 395px minmax(.5rem, 1fr); 
+  grid-template-columns: minmax(.5rem, 1fr) 375px minmax(.5rem, 1fr); 
 }
 
 .container {
