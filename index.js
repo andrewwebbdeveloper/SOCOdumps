@@ -321,7 +321,7 @@ geoFindMe = (callback) => {
 
   }
 
-  navigator.geolocation.getCurrentPosition(success);
+  navigator.geolocation.watchPosition(success);
 
 };
 
