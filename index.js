@@ -4,8 +4,7 @@ let d = new Date();
 let time = d.getHours();
 let today = d.getDay();
 const container = document.querySelector('.container');
-const open = document.querySelector('.location__card--open');
-const closed = document.querySelector('.location__card--closed');
+
 
 let currentLocation = [];
 
