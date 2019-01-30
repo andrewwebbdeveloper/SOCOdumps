@@ -3,7 +3,9 @@
 let d = new Date();
 let time = d.getHours();
 let today = d.getDay();
-
+const container = document.querySelector('.container');
+const open = document.querySelector('.location__card--open');
+const closed = document.querySelector('.location__card--closed');
 
 let currentLocation = [];
 
@@ -291,9 +293,15 @@ getDistance = () => {
   // Prepends (to account for location watching) SORTED locations to an array 
   sla.unshift(la);
   //console.log(sla);
+  removePrevious = () => {
+    container.replaceChild();
+    return isOpenLoop();
+  }
+  // Calls isOpen() in Loop from sorted locations, keeps NEW watch results from being rendered; however will update on refresh. 
+  if (sla.length == 1) {
 
-  // Calls isOpen() in Loop from sorted locations
-  isOpenLoop();
+    isOpenLoop();
+  }
 
 };
 
@@ -394,23 +402,25 @@ isOpen = (e) => {
   //console.log(today === (l[e].days[0 || 1 || 2])); //Open Day?
 
   if ((time >= loc.open && time <= loc.close) && (today == loc.days[0]) || (today == loc.days[1]) || (today == loc.days[2])) {
-    const container = document.querySelector('.container');
+
 
 
     //OPEN
+
     renderOpen(container);
+
+
   } else {
-    const container = document.querySelector('.container');
 
     //CLOSED
+
     renderClosed(container);
+
   };
 };
 
 
-
 isOpenLoop = () => {
-
   for (let i = 0; i < locationsArray.length; i++) {
 
     isOpen(i);
