@@ -293,8 +293,9 @@ getDistance = () => {
   //console.log(sla);
 
   // Calls isOpen() in Loop from sorted locations
-  isOpenLoop();
-
+  if (sla.length == 1) {
+    isOpenLoop();
+  }
 };
 
 
