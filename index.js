@@ -5,6 +5,7 @@ let time = d.getHours();
 let today = d.getDay();
 
 
+
 let currentLocation = [];
 
 /*********LOCATIONS*****************************************/
@@ -391,10 +392,9 @@ isOpen = (e) => {
     container.insertAdjacentHTML('beforeend', openRender);
   };
 
-  //console.log(time >= l[e].open || time <= l[e].closed); //Open Hours?
-  //console.log(today === (l[e].days[0 || 1 || 2])); //Open Day?
 
-  if ((time >= loc.open && time <= loc.close) && (today == loc.days[0]) || (today == loc.days[1]) || (today == loc.days[2])) {
+
+  if ((time > loc.open && time < loc.close) && ((today == loc.days[0]) || (today == loc.days[1]) || (today == loc.days[2]))) {
     const container = document.querySelector('.container');
 
 
