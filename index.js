@@ -1,10 +1,7 @@
-
 /* TODO : Add short maps url to each object */
 let d = new Date();
 let time = d.getHours();
 let today = d.getDay();
-
-
 
 let currentLocation = [];
 
@@ -18,7 +15,7 @@ let locationsArray = [
     days: [2, 4, 6],
 
     currentDistance: [],
-    latitude: 36.591380,
+    latitude: 36.59138,
     longitude: -77.190742,
     lonlat: '36.591380, -77.190742',
     url: 'https://goo.gl/maps/6FvqNd7qHFC2'
@@ -127,27 +124,23 @@ let locationsArray = [
     longitude: -76.938154,
     lonlat: '36.737563, -76.938154',
     url: 'https://goo.gl/maps/K3761E2qFdz'
-
-
   },
   {
-    name: "Sebrell",
-    address: "22244 Barn Tavern Road",
+    name: 'Sebrell',
+    address: '22244 Barn Tavern Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
 
     currentDistance: [],
     latitude: 36.786994,
-    longitude: -77.128300,
+    longitude: -77.1283,
     lonlat: '36.786994, -77.128300',
     url: 'https://goo.gl/maps/2GU3z4qUguM2'
-
-
   },
   {
-    name: "Monroe",
-    address: "30080 Monroe Road",
+    name: 'Monroe',
+    address: '30080 Monroe Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
@@ -157,12 +150,10 @@ let locationsArray = [
     longitude: -77.005194,
     lonlat: '36.610853, -77.005194',
     url: 'https://goo.gl/maps/R83aNe9skBv'
-
-
   },
   {
-    name: "Courtland",
-    address: "22802 Meherrin Road",
+    name: 'Courtland',
+    address: '22802 Meherrin Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
@@ -172,12 +163,10 @@ let locationsArray = [
     longitude: -77.087063,
     lonlat: '36.710335, -77.087063',
     url: 'https://goo.gl/maps/EmgZg549Qyv'
-
-
   },
   {
-    name: "Drewryville",
-    address: "11264 Old Belfield Road",
+    name: 'Drewryville',
+    address: '11264 Old Belfield Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
@@ -187,12 +176,10 @@ let locationsArray = [
     longitude: -77.316034,
     lonlat: '36.718684, -77.316034',
     url: 'https://goo.gl/maps/dFMmoJLkRy62'
-
-
   },
   {
-    name: "Branchville",
-    address: "16154 Old Branchville Road",
+    name: 'Branchville',
+    address: '16154 Old Branchville Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
@@ -202,12 +189,10 @@ let locationsArray = [
     longitude: -77.237659,
     lonlat: '36.583879, -77.237659',
     url: 'https://goo.gl/maps/fckBkGN9FBP2'
-
-
   },
   {
-    name: "Ivor",
-    address: "36249 General Mahone Blvd.",
+    name: 'Ivor',
+    address: '36249 General Mahone Blvd.',
     open: 7,
     close: 19,
     days: [3, 5, 0],
@@ -217,33 +202,25 @@ let locationsArray = [
     longitude: -76.881092,
     lonlat: '36.898776, -76.881092',
     url: 'https://goo.gl/maps/AVaU4WpEnzp'
-
-
   },
   {
-    name: "Unity",
-    address: "35350 Unity Road",
+    name: 'Unity',
+    address: '35350 Unity Road',
     open: 7,
     close: 19,
     days: [3, 5, 0],
 
     currentDistance: [],
-    latitude: 36.814450,
-    longitude: -76.899690,
+    latitude: 36.81445,
+    longitude: -76.89969,
     lonlat: '36.814450, -76.899690',
     url: 'https://goo.gl/maps/K1oRWVmrSRL2'
-
-
-  },
-
-
-]
+  }
+];
 
 let sortedLocationsArray = [];
 
-
 getDistance = () => {
-
   const la = locationsArray;
   const sla = sortedLocationsArray;
 
@@ -255,41 +232,39 @@ getDistance = () => {
 
     // Algorithm for Distance calculation
     distance = (lat1, lon1, lat2, lon2, unit) => {
-      if ((lat1 == lat2) && (lon1 == lon2)) {
+      if (lat1 == lat2 && lon1 == lon2) {
         return 0;
-      }
-      else {
-        let radlat1 = Math.PI * lat1 / 180;
-        let radlat2 = Math.PI * lat2 / 180;
+      } else {
+        let radlat1 = (Math.PI * lat1) / 180;
+        let radlat2 = (Math.PI * lat2) / 180;
         let theta = lon1 - lon2;
-        let radtheta = Math.PI * theta / 180;
-        let dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+        let radtheta = (Math.PI * theta) / 180;
+        let dist =
+          Math.sin(radlat1) * Math.sin(radlat2) +
+          Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
         if (dist > 1) {
           dist = 1;
         }
         dist = Math.acos(dist);
-        dist = dist * 180 / Math.PI;
+        dist = (dist * 180) / Math.PI;
         dist = dist * 60 * 1.1515;
         //if (unit == "K") { dist = dist * 1.609344 }
         //if (unit == "N") { dist = dist * 0.8684 }
 
         return dist;
       }
-    }
+    };
 
     // Prepends distance onto location's current distance Array
     la[i].currentDistance.unshift(distance(lat1, lon1, lat2, lon2));
 
     //Sorts locations by distance least to greatest
-    la.sort(function (a, b) { return a.currentDistance[0] - b.currentDistance[0] });
-
-
-
-
-
+    la.sort(function(a, b) {
+      return a.currentDistance[0] - b.currentDistance[0];
+    });
   }
 
-  // Prepends (to account for location watching) SORTED locations to an array 
+  // Prepends (to account for location watching) SORTED locations to an array
   sla.unshift(la);
   //console.log(sla);
 
@@ -299,18 +274,13 @@ getDistance = () => {
   }
 };
 
-
-
-
 // Finds current locations and watches for more accurate data
-geoFindMe = (callback) => {
-
-
+geoFindMe = callback => {
   if (!navigator.geolocation) {
-    console.log('geolocation no worky')
+    console.log('geolocation not working');
   }
 
-  success = (position) => {
+  success = position => {
     //var latitude = 36.775843;
     //var longitude = -77.079327;
     let latitude = position.coords.latitude;
@@ -320,28 +290,17 @@ geoFindMe = (callback) => {
     //console.log(latitude, longitude);
 
     callback();
-
-  }
+  };
 
   navigator.geolocation.watchPosition(success);
-
 };
 
-
-
-
-
-
-
 //  Current hour is less than or more than && is open on this day
-isOpen = (e) => {
-
+isOpen = e => {
   const sla = sortedLocationsArray[0];
   const loc = sla[e];
 
-
   const renderClosed = container => {
-
     const closedRender = `
     <div class="location__card--closed">
         <h2 class="location__card--title">${loc.name}</h2>
@@ -391,12 +350,13 @@ isOpen = (e) => {
 
     container.insertAdjacentHTML('beforeend', openRender);
   };
-
-
-
-  if ((time > loc.open && time < loc.close) && ((today == loc.days[0]) || (today == loc.days[1]) || (today == loc.days[2]))) {
+  if (
+    //prettier-ignore
+    (time >= loc.open &&
+    time < loc.close) &&
+    (today == loc.days[0] || today == loc.days[1] || today == loc.days[2])
+  ) {
     const container = document.querySelector('.container');
-
 
     //OPEN
     renderOpen(container);
@@ -405,19 +365,14 @@ isOpen = (e) => {
 
     //CLOSED
     renderClosed(container);
-  };
+  }
 };
 
-
-
 isOpenLoop = () => {
-
   for (let i = 0; i < locationsArray.length; i++) {
-
     isOpen(i);
-
   }
-}
+};
 
 // Calls to find and then calculate distance
 geoFindMe(getDistance);
